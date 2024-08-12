@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 3</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Infrormation</legend>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+
+        <label for="phone_num">Phone</label>
+        <input type="tel" name="phone_num" id="phone_num">
+
+        <label for="BOB">Date of Birth</label>
+        <input type="date" name="BOB" id="BOB">
+
+        <span>Gender:</span>
+        <label for="radio">Male</label>
+        <input type="radio" name="radio" id="gender">
+        <label for="radio">Female</label>
+        <input type="radio" name="radio" id="gender">
+
+
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="1">United States</option>
+            <option value="2">Australia</option>
+            <option value="3">India</option>
+            <option value="4">China</option>
+        </select>
+    </fieldset>
+
+    <br>
+    
+
+
+    <fieldset>
+        <legend>
+       Address
+        </legend>
+
+        <label for="add">Street </label>
+        <input type="text" name="add" id="add">
+        <br>
+        <br>
+
+        <label for="ct">City</label>
+        <input type="text" name="ct" id="ct">
+        <br>
+        <br>
+
+        <label for="st">State</label>
+        <input type="text" name="st" id="st">
+        <br>
+        <br>
+
+        <label for="zpcode">Zip Code</label>
+        <input type="text" name="zpcode" id="zpcode">
+        <br>
+        <br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Other Information</legend>
+
+
+        <label for="comments">Comments</label>
+        <br>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        <label for="check">I agree to all terms and condition</label>
+        <input type="checkbox" name="check" id="check">
+    </fieldset>
+
+    <input type="submit" value="Submit">
+</body>
+</html>
