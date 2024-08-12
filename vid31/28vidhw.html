@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating 9 Areas with new learnings</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100%;
+            width: 100%;
+        }
+
+        .container,.container2,.container3{
+            height: 100%;
+            width: 100%;
+            display: grid;
+            gap: 1rem;
+            padding: 4rem;
+            background-color: rgb(71, 65, 58);
+        }
+        .container{
+            grid-template-areas: 
+            "one two three"
+            "four five six"
+            ;
+        }
+
+        .container2{
+            grid-template-areas: 
+            "one one two"
+            "three four two"
+            ;
+        }
+
+        .container3{
+            grid-template-areas: 
+            "one one one"
+            "two three three"
+            "four four four"
+            ;
+        }
+
+        
+
+        .item{
+         
+            
+            background-color: #9a5aaf;
+            color: antiquewhite;
+            gap: 0.2rem;
+            padding: 1rem;
+            border: 2px solid rgb(18, 17, 17);
+        }
+
+        #one{
+            grid-area: one;
+            background-color: red;
+        }
+
+        #two{
+            grid-area: two;
+            background-color: orangered;
+        }
+
+        #three{
+            grid-area: three;
+            background-color: orange;
+        }
+
+        #four{
+            grid-area: four;
+        }
+
+        #five{
+            grid-area: five;
+        }
+
+        #six{
+            grid-area: six;
+        }
+
+        #seven{
+            grid-area: seven;
+        }
+
+        #eight{
+            grid-area: eight;
+        }
+
+        #nine{
+            grid-area: nine;
+        }
+    </style>
+</head>
+<body>
+    <!-- Type 1 -->
+    <div class="container">
+        <div class="item" id="one">A</div>
+        <div class="item" id="two">B</div>
+        <div class="item" id="three">C</div>
+        <div class="item" id="four">D</div>
+        <div class="item" id="five">E</div>
+        <div class="item" id="six">F</div>
+        <!-- <div class="item" id="seven">G</div>
+        <div class="item" id="eight">H</div>
+        <div class="item" id="nine">I</div> -->
+    </div>
+
+    <!-- Type 2 -->
+    <div class="container2">
+        <div class="item" id="one">A</div>
+        <div class="item" id="two">B</div>
+        <div class="item" id="three">C</div>
+        <div class="item" id="four">D</div>
+        <!-- <div class="item" id="five">E</div>
+        <div class="item" id="six">F</div> -->
+        <!-- <div class="item" id="seven">G</div>
+        <div class="item" id="eight">H</div>
+        <div class="item" id="nine">I</div> -->
+    </div>
+
+
+    <!-- Type -3 -->
+    <div class="container3">
+        <div class="item" id="one" >A</div>
+        <div class="item" id="two" >B</div>
+        <div class="item" id="three" >C</div>
+        <div class="item" id="four" >D</div>
+    </div>
+</body>
+</html>

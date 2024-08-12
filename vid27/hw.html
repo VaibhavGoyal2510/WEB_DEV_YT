@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            min-height: 729px;
+            align-items: center;
+            background-color: #8BC6EC;
+            background-image: linear-gradient(135deg, #8BC6EC 0%, #191955 100%);
+            
+        }
+
+        .box{
+            width: 1000px;
+            height: 550px;
+            display: flex;
+            background-color: rgb(60, 6, 60);
+            transition: all 0.3s linear 0s;
+           
+        }
+
+        .box:hover{
+            box-shadow: 0px 0px 50px black;
+        }
+
+        #rightside img{
+            height: 550px;
+            width: 500px;
+        }
+
+        #leftside{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        #leftside h2{
+            color: white;
+            font-weight: bold;
+            font-size: 2.6rem;
+        }
+
+        #lastbox{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: white;
+        }
+
+        #leftside p{
+            color: rgba(245, 245, 245, 0.584);
+            font-size: 1.5rem;
+        }
+
+       #lastbox p{
+            color: rgba(255, 255, 255, 0.659);
+            font-size: 1rem;
+        }
+
+        overlay{
+            background-color: rgba(128, 128, 128, 0.581);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            position: absolute;
+            border-radius: 20px;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.753);
+            opacity: 1;
+            transition: all 0.4s linear 0s;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="overlay">
+        <div class="box">
+            <div id="leftside">
+                <h2>Get insights that help your business grow</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae voluptate, ec eede sni refef ecevoluptatum natus ullam laboriosam placeat?</p>
+                <div id="lastbox">
+
+                    <div>
+                        <h3>10K+</h3>
+                        <p>Comments</p>
+                    </div>
+
+                    <div>
+                        <h3>214</h3>
+                        <p>Paid Users</p>
+                    </div>
+
+
+                    <div> 
+                        <h3>12M+</h3>
+                        <p>Views</p>
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div id="rightside">
+                <img src="crazy.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>

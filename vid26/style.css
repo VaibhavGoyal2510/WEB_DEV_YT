@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    overflow-x: none;
+    padding-right: 2rem;
+}
+
+#navlist{
+    width: 100%;
+    padding: 15px;
+   /*  margin-left: 15px ;
+    margin-right: 15px; */
+    list-style: none;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    overflow-x: none;
+
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+}
+
+.navcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* background-color: #243B55; /*  Royal */ 
+
+    background-image: linear-gradient( 85.2deg,  rgba(33,3,40,1) 7.5%, rgba(65,5,72,1) 88.7% );
+   /*  background-color: rgba(87, 87, 144, 0.567); */
+   /* background-image: linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% ); */
+    min-height: 70px;
+    position: relative;
+}
+
+#navLogo{
+    font-size: 2.8rem;
+    color: beige;
+}
+
+#item{
+    display: flex;
+    gap: 40px;
+}
+
+
+a{
+    text-decoration: none; /* To remove underline from anchor tag */
+    color: beige;
+}
+
+.footerbox{
+
+    min-height: 35px;
+    text-align: center;
+    width: 100%;
+    color: beige;
+    background-image: linear-gradient( 85.2deg,  rgba(33,3,40,1) 7.5%, rgba(65,5,72,1) 88.7% );
+    /* background-color: #243B55; /* Royal */ 
+ /*    background-image: linear-gradient( 109.6deg,  rgba(102,51,153,1) 11.2%, rgba(2,0,4,1) 91.1% ); */
+}
+
+
+.footerbox p{
+    color: beige;
+    font-size: 2rem;
+}
+
+.contentbox{
+    /* border: 1px solid black; */
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 3rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    box-shadow: 0px 0px 25px black;
+}
+
+
+.itemone{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.rightbox{
+    position: relative;
+   /*  overflow: auto; */ /* with this the image is not looking good */
+    transition: all 0.3s linear 0s;
+
+    filter: drop-shadow(0 0 0.75rem black);
+   
+}
+.rightbox img{
+    height:250px;
+    border-radius: 20px;
+    transition: all 0.4s linear 0s;
+}
+
+.rightbox:hover{
+    transform: scale(1.1);
+  
+}
+
+.rightbox .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.753);
+    opacity: 0;
+    transition: all 0.4s linear 0s;
+}
+
+.rightbox:hover .overlay{
+    opacity: 1;
+}
+
+.rightbox .overlay span{
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+
+.leftbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.leftbox h2{
+    font-size: 2rem;
+}
+
+
+.ingBox{
+    font-size: 1.4rem;
+}
+
+
+.recipeBox{
+    font-size: 1.1rem;
+}

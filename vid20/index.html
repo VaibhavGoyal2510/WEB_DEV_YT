@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+
+        .container{
+            background-color: beige;
+            border: 5px solid black;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            height: 1200px;
+            flex-direction: row;
+            /* flex-direction is used to position items vertically(column) and
+            horizontally (row) and row-reverse to reverse the initial order of the flex items*/
+
+
+            /*flex-wrap: wrap;
+            /*It helps in maintaining the size of the item intact. It does not changes according to different screens
+            untill the space is available, instead it shifts with same dimension to either horizontally or vertically according to the changes*/
+
+            /*No-wrap -> when screen size is changed the items or boxes will not go to the next line i.e. there original sizes will not remain same even
+            though the space is available.*/
+
+            /*wrap-reverse -> It works similar to wrap just the difference is that in wrap the rightmost item gets shifted down when screen size was reduced
+            whereas in wrap-reverse the right item moves upwards*/
+
+
+
+            justify-content: start;
+            /*justify-content -> It justifies the content or items in a container according to flex direction like 
+            for property Center -> and flex-direction is row then the items are arranged at the center of horizontal line and vice versa. */
+
+            /*next property space-between*/
+            /*the 1st and last item are placed at the starting and ending and equal spaces are made between all the elements*/
+
+            /*next property space-around*/
+            /*all boxes or items are separated with equal space and this time starting from margin unlike space between where 1st and the last elements where sticked to the margins
+            left and right space equal for each item that is the space between 1 and 2 box is more */
+
+            /*space-evenly*/
+            /*All are evenly spaced.*/
+
+
+           align-items: start;
+            /*this property works on the cross axis. By default cross axis is vertical*/
+
+
+           align-content: center;
+        }
+        .box{
+            /*height: 200px;
+            width: 200px;*/
+            margin: 2px;
+            padding: 2px;
+            border: 2px solid brown;
+        
+        }
+        #box1{
+            background-color: aqua;
+            /*order: 500;*/
+            /*by using order we can change order or sequence of the items placed*/
+
+            /*flex-shrink: 4;  speed of shrinking when screen size is changed in comparision or in respect to the other boxes
+            so it is 4x of the speed where x is the speed of shrinking of other boxes*/
+
+            /*flex-grow: 1;*/
+
+            align-self: end;
+        }
+
+        #box2{
+            background-color: blue;
+            /*flex-grow: 1;*/
+        }
+        #box3{
+            background-color: orange;
+            /*flex-grow: 1;*/
+        }
+        #box4{
+            background-color: brown;
+            /*flex-grow: 1;*/
+           /* order: -1;*/
+          /*  flex-basis: 400px;  we can set dimension using basis*/
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">BOX 1</div>
+        <div class="box" id="box2">BOX 2</div>
+        <div class="box" id="box3">BOX 3</div>
+        <div class="box" id="box4">BOX 4</div>
+    </div>
+</body>
+</html>

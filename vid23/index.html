@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box ;
+        }
+
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background-color: beige;
+            border: 5px solid black;
+        }
+
+        .box{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            border: 3px solid brown;
+           
+
+            animation-name: rightMovement;
+
+            animation-duration: 5s;  /*how much time animation should take to complete*/
+            animation-iteration-count: 2; /*how many times animation should run*/
+
+            animation-delay: 0; /*how much time should animation take before starting*/
+
+            animation-timing-function: linear; /*the pace of the animation will be same throughout unlike before it when it was
+            fast wwhile starting and became slow eventually*/
+
+           /* animation-timing-function: ease-out;/*ease - in -> slow in beginning and becomes fast afterwards
+            ease-out -> fast in beginning and slow afterwards i.e. towards the end.*/
+
+            /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); /*used to create animation with different speed of starting and ending*/
+
+
+            /* animation-direction: alternate; /*goes to the end and then comes back*/
+
+           /*  animation-direction: reverse; /*travels from the end point to the starting point*/
+
+           /*  animation-direction: alternate-reverse;/*Traavels from the end to the start and then again goes from start to end. 
+            Basically reverse of alternate as the name suggests. */
+
+
+            /*Fill-mode Helps in controlling what the element will do before the starting of the animation and after the ending of the animation.*/
+            animation-fill-mode: forwards; /*Will complete the animation and stop at the end that is in linear case right position*/
+
+            animation-fill-mode: backwards; /*Will stop where it started that is does the normal behaviour*/
+
+
+
+            /*SHORT HAND NOTATION*/
+
+
+            /* @keyframes duration | easing-function | delay |
+            iteration-count | direction | fill-mode | play-state | name */
+            animation: 5s linear 1s  infinite alternate none running rightMovement;
+        }
+
+        @keyframes rightMovement {
+            from{
+
+                top: 0;
+                left: 0;
+            }
+
+            to{
+                top: 0;
+                left: 1150px;
+            }
+        }
+
+        #box2{
+            width: 350px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            border: 3px solid brown;
+
+            animation-name: leftMovement;
+
+            animation: 5s ease-in 1s  infinite alternate none running leftMovement;
+        }
+
+        @keyframes leftMovement {
+            from{
+
+                top: 520px;
+                left:650px;
+            }
+
+            to{
+                top: 520px;
+                left: 0;
+            }
+        }
+
+        #circle{
+            width: 77px;
+            height: 80px;
+            background-color: blue;
+            border-radius: 50px;
+            margin: 10px;
+            position: relative;
+            top: 140px;
+            left: 45%;
+            animation-name: circlemove;
+
+            animation: 5s ease-in-out 0s  infinite alternate-reverse none running circlemove;
+        }
+
+        
+        @keyframes circlemove {
+            0%{
+
+                top: 1%;
+                left: 5%;
+            }
+
+            30%{
+                top: 5%;
+                left: 90%;
+            }
+
+            60%{
+                top: 60%;
+                left: 10%;
+            }
+
+            100%{
+                top: 65%;
+                left: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box">Kya dekh Rha hai?</div>
+
+        <div id="box2"></div>
+
+        <div id="circle"></div>
+     </div>
+</body>
+</html>

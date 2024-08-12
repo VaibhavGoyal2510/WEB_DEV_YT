@@ -1,0 +1,126 @@
+<!--
+    
+/* Keyword values */
+box-shadow: none;
+
+/* A color and two length values */
+/* <color> | <length> | <length> */
+box-shadow: red 60px -16px;
+
+/* Three length values and a color */
+/* <length> | <length> | <length> | <color> */
+box-shadow: 10px 5px 5px black;
+
+/* Four length values and a color */
+/* <length> | <length> | <length> | <length> | <color> */
+box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+/* inset, length values, and a color */
+/* <inset> | <length> | <length> | <color> */
+box-shadow: inset 5em 1em gold;
+
+/* Any number of shadows, separated by commas */
+box-shadow:
+  3px 3px red inset,
+  -1em 0 0.4em olive;
+
+/* Global values */
+box-shadow: inherit;
+box-shadow: initial;
+box-shadow: revert;
+box-shadow: revert-layer;
+box-shadow: unset;
+<
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows in CSS</title>
+
+    <style>
+        :root{
+            --primary-color: brown;
+            --custom-width: 330px;
+        }
+        .container{
+            background-color: beige;
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+
+            /*syntax for making a variable
+            --var_name-thing u wanna make variable of: value;
+            Eg.-> --xyz-width: 400px; 
+            If we create these variables in a particular class or box then its scope is to it only. 
+            For extending its scope to the whole style we make root which is made above in this program */
+
+            
+            background-color: aquamarine;
+            width: var(--custom-width);
+            height: 330px;
+            /*border: 10px solid var(--primary-color);*/
+            margin: 5px;
+            padding: 5px;
+           /* box-shadow: -10px 15px brown;*/
+
+           /*block shadow using blur radius
+           box-shadow: 10px 15px 50px brown;*/
+
+           /*spread radius with blur radius
+           box-shadow: 10px 15px 5px 40px rgba(13, 45, 66, 0.7);*/ 
+
+
+           /*box-shadow: inset  10px 15px brown;*/
+
+         /* Multiple Shadows  
+         box-shadow: 10px 15px 50px red, 15px 8px 50px green;*/
+
+        }
+
+        #head1{
+            /* text-shadow: offset-x offset-y blur-radius color;
+
+            Different syntaxes for different shadows
+            By default shadow color is black given in the 4th case*/
+
+            /*text-shadow: 13px 3px 1px white;*/
+
+           /* text-shadow: yellow 12px 13px 2px;*/
+
+           /*text-shadow: white 12px 13px ;*/
+
+          /* text-shadow: 12px 13px; */
+
+
+         /* text-shadow: red 12px 12px 3px, yellow 10px 10px 2px, green 13px 13px 2px;*/
+
+
+
+         /*Multiple Shadows to a text In CSS*/
+          text-shadow: 
+          2px 2px 5px #ff0000,  /* Red shadow with blur */
+          -2px -2px 5px #00ff00, /* Green shadow with blur */
+          2px -2px 5px #0000ff,  /* Blue shadow with blur */
+          -2px 2px 5px #ff00ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="t.jpeg" alt="">
+            <h2 id="head1">Welcome to Sleep</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A hic accusamus rerum exercitationem veniam perspiciatis consectetur natus, quas nemo eius, sunt molestias eligendi, dicta est!</p>
+        </div>
+    </div>
+</body>
+</html>

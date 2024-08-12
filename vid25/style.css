@@ -1,0 +1,57 @@
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: beige;
+    border: 2px solid black;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    transition: all 1s linear 0s;
+
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+  /*   transform: rotate(360deg); */
+
+
+  /*scaling is used to increase and decrease size   */
+/*   transform: scale(2);  */
+   /*  transform: scale(0.5); */
+/* 
+   transform: rotate(-45deg); */ /* negative helps in rotating anti-clockwise */
+
+/*    transform: skew(-45deg);  */ /* Used to tilt  */
+
+/* transform: translate(x-axis mein kitna jana chahiye, y-axis mein kitna jana chahiye); */
+/* transform: translate(500px,500px); */
+
+/* transform: matrix(1, 2, 3, 4, 5, 6); */
+
+/* transform: perspective(17px); */
+
+/* transform: scale3d(2.5, 1.2, 0.3); */
+
+
+
+/* Multiple Function Values */
+/* transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg); */
+
+transform: translateX(10px) rotate(10deg) translateY(5px);
+}
+
+p{
+    font-size: 36px;
+   
+}

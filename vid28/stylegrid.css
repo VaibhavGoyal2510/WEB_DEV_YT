@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(69, 66, 66);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,200px);
+    gap: 0.4rem;
+    padding: 4rem;
+    border: 2px solid white;
+
+  /*   justify-items: stretch;
+
+    align-items: end ; */
+
+    place-items: center;
+   
+}
+
+.item{
+/*     height: 50px;
+    width: 100px; */
+    background-color: rgb(40, 206, 15);
+    border: 5px solid rgb(204, 191, 191);
+
+     /* To allign corresponding to horizontal axis */
+ /*     justify-self: stretch; /* In stretch provided that width and height is not assigned
+     it stretches and takes up the space provided */
+
+
+    /* To allign corresponding to vertical axis */
+  /*   align-self: stretch;  */
+
+
+    /* place-self sets both align-self and justify-self 
+    properties in a single declaration */
+  /*   place-self: stretch; */ 
+}
